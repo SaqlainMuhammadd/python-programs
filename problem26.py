@@ -26,4 +26,3 @@ with open("practice.txt", "r") as f:
         print("Found")
     else:
         print("Not Found")
-
