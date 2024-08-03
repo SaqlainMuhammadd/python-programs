@@ -12,7 +12,14 @@ def deposit():
         return amount
 
 def widthdraw():
-    pass
+    amount = float(input("Enter the Widthdraw amount : "))
+
+    if amount > balance:
+        print("Insufficient Balance")
+    elif amount < 0:
+        print("Amount must be greater then 0")
+    else:
+        return amount
 
 balance = 0
 is_running = True
@@ -31,7 +38,7 @@ while is_running:
     elif choice == '2':
         balance += deposit()
     elif choice == '3':
-        widthdraw()
+        balance -= widthdraw()
     elif choice == '4':
         is_running = False
     else:
